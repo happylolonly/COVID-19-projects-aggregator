@@ -4,7 +4,7 @@ import config from "../../config";
 import ProjectModel from "./models/project";
 
 export default async (req, res) => {
-  console.log("1");
+  console.log("get projects");
   // if (mongoose.connections[0].readyState) return;
   // Using new database connection
 
@@ -15,18 +15,26 @@ export default async (req, res) => {
       useCreateIndex: true
     });
 
-    try {
-      const projects = await ProjectModel.find({});
-      res.send({
-        total: projects.length,
-        data: projects
-      });
+    const { limit = 15, offset = 0 } = req.query;
 
-      return;
+    const find = {};
 
-      console.log(projects);
-    } catch (error) {}
+    const totalProjects = ProjectModel.find(find).count();
+    const projects = ProjectModel.find(find)
+      .limit(+limit)
+      .skip(+offset);
+
+    const r = await Promise.all([totalProjects, projects]);
+
+    res.send({
+      total: r[0],
+      data: r[1]
+    });
+
+    return;
   } catch (error) {
+    console.log(error);
+
     req.send(error);
   }
 };
