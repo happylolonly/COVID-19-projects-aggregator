@@ -1,0 +1,22 @@
+.projects-page {
+
+    .project-item {
+        margin: 20px auto;
+        padding: 20px 25px;
+        max-width: 680px;
+        box-shadow: 1px 1px 5px gray;
+
+        p {
+            br {
+                display: block;
+                margin: 20px 0;
+            }
+        }
+
+        .source {
+            a {
+                display: block;
+            }
+        }
+    }
+}
