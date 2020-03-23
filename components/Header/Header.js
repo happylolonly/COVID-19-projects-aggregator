@@ -28,6 +28,15 @@ function Header(props) {
             Tech communities agregator 💻
           </a>
         </li>
+
+        <li>
+          <a
+            href="https://helpwithcovid.com/projects/267-covid-19-projects-aggregator"
+            target="_blank"
+          >
+            Help us 🙏
+          </a>
+        </li>
       </ul>
     </div>
   );

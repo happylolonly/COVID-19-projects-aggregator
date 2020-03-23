@@ -6,9 +6,11 @@
       display: inline-block;
       margin: 10px;
 
+      &:nth-last-of-type(2),
       &:last-of-type {
         float: right;
       }
+
     }
   }
 }
