@@ -1,11 +1,9 @@
 .projects-page {
 
-
     .project-item {
         margin: 20px auto;
         padding: 20px 25px;
         max-width: 680px;
-        background-color: white;
         box-shadow: 1px 1px 5px gray;
 
         p {
@@ -20,5 +18,13 @@
                 display: block;
             }
         }
+    }
+    #pagination {
+        max-width:680px;
+        position:relative;
+        padding:10px;
+        margin: 20px auto;
+        border:1px solid #333;
+        background:#fff;
     }
 }
