@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Link from "next/link";
 
 const Home = () => (
   <div className="container">
@@ -11,8 +12,13 @@ const Home = () => (
 
     <Header />
 
-    <main>Landing page</main>
+    <main>
+      <h1>All COVID-19 projects in one place</h1>
 
+      <Link href="/projects">
+        <a>Check projects</a>
+      </Link>
+    </main>
     <Footer />
   </div>
 );
