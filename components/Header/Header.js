@@ -22,6 +22,12 @@ function Header(props) {
             <a>Add project</a>
           </Link>
         </li>
+
+        <li>
+          <a href="https://civictechhub.netlify.com/" target="_blank">
+            Tech communities agregator 💻
+          </a>
+        </li>
       </ul>
     </div>
   );

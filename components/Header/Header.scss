@@ -5,6 +5,10 @@
     li {
       display: inline-block;
       margin: 10px;
+
+      &:last-of-type {
+        float: right;
+      }
     }
   }
 }
