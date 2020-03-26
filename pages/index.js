@@ -19,7 +19,7 @@ const data = [
   },
   {
     title: "Open-Source-COVID-19",
-    href: "http://open-source-covid-19.weileizeng.com/",
+    href: "http://open-source-covid-19.weileizeng.com",
     description:
       "Open Source COVID-19 collects open source projects during COVID-19. The projects are not necessarily hosted on GitHub, as long as it coroprates in an open source way, that everyone can access, inspect and improve it. The goal of this navigation site is to help people access data, contribute to the projects, and trigger new ideas."
   },
@@ -36,6 +36,18 @@ const data = [
       "https://docs.google.com/document/d/1c97cUL2tXHfxUu_GNhwdBV1W7ncY0gZ42ObwiiAYqIs",
     description:
       "A directory of initiatives related to COVID-19, what they need, and proposals for new initiatives."
+  },
+  {
+    title: "Reddit COVIDProjects",
+    href: "https://www.reddit.com/r/COVIDProjects",
+    description:
+      "Place to discuss, showcase, and ask for help with projects relating to response to COVID-19 and the novel coronavirus."
+  },
+  {
+    title: "",
+    href:
+      "https://docs.google.com/spreadsheets/d/1i0QdZ1HTi9D9o7FX8Zk-R7EwqiGiqP0LiqcNxA9wYbA/edit#gid=735405623",
+    description: "Projects Excel Database"
   }
 ];
 
@@ -49,19 +61,28 @@ const Home = () => (
     {/* <Header /> */}
 
     <main>
-      <h1>How can I help with COVID-19?</h1>
+      <h1>COVID-19 projects lists</h1>
 
-      <h2>Already established Project Sites</h2>
+      <p>
+        Want to help to fight with COVID-19? There are a lot of projects are in
+        development right now and they are looking for help!
+        <br />
+        <br />
+        We have collected links with projects, just choose what you like and
+        let's defeat COVID-19 🦠🚫 together!
+      </p>
 
       {data.map(item => {
         const { title, description, href } = item;
         return (
           <div className="card website">
-            <h3>{title}</h3>
+            <header>
+              <h3>{title}</h3>
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {href}
+              </a>
+            </header>
             <p>{description}</p>
-            <a href={href} target="_blank" rel="noopener noreferrer">
-              {href}
-            </a>
           </div>
         );
       })}
@@ -71,7 +92,7 @@ const Home = () => (
         href="mailto:happylolonly@gmail.com"
         target="_blank"
       >
-        Suggest another Project Site to be added
+        Suggest another Project Site to be added!
       </a>
     </main>
     {/* <Footer /> */}

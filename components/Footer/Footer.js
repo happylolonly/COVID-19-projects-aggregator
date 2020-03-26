@@ -4,7 +4,7 @@ import "./Footer.scss";
 function Footer(props) {
   return (
     <footer className="footer">
-      <div>
+      {/* <div>
         Contact us:
         <br />
         <a href="mailto:happylolonly@gmail.com">happylolonly@gmail.com</a>
@@ -15,8 +15,7 @@ function Footer(props) {
         >
           Join Slack
         </a>
-      </div>
-      <br />
+      </div> */}
       2020
     </footer>
   );
