@@ -7,6 +7,7 @@ import "./_app.scss";
 // import { initStore } from '../redux/store';
 
 // import moment from 'moment';
+import Head from "next/head";
 
 // moment.locale('ru');
 
@@ -28,9 +29,32 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, store } = this.props;
     return (
-      //   <Provider store={store}>
-      <Component {...pageProps} />
-      //   </Provider>
+      <>
+        <Head>
+          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-161836138-1"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-161836138-1');
+              
+              `
+            }}
+          ></script>
+          }}
+        </Head>
+        {/* <Provider store={store}> */}
+        <Component {...pageProps} />
+        {/* //{" "} */}
+        {/* </Provider> */}
+      </>
     );
   }
 }
