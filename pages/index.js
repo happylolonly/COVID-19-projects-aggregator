@@ -95,7 +95,7 @@ const Home = () => (
         Suggest another Project Site to be added!
       </a>
     </main>
-    {/* <Footer /> */}
+    <Footer />
   </div>
 );
 
