@@ -6,6 +6,11 @@ import "./index.scss";
 
 const data = [
   {
+    title: "COVID-19 Solutions",
+    href: "https://airtable.com/shrPm5L5I76Djdu9B/tbl6pY6HtSZvSE6rJ",
+    description: "Large table with COVID-19 solutions"
+  },
+  {
     title: "Help with COVID",
     href: "https://helpwithcovid.com",
     description:
