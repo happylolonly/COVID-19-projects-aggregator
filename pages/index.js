@@ -53,6 +53,11 @@ const data = [
     href:
       "https://docs.google.com/spreadsheets/d/1i0QdZ1HTi9D9o7FX8Zk-R7EwqiGiqP0LiqcNxA9wYbA/edit#gid=735405623",
     description: "Projects Excel Database"
+  },
+  {
+    title: "Accelerate Estonia hackathon's projects",
+    href: "https://accelerateestonia.ee/en/hack-the-crisis",
+    description: ""
   }
 ];
 
